@@ -1,4 +1,4 @@
-let money = prompt("Ваш бюджет на месяц?");
+let money = +prompt("Ваш бюджет на месяц?");
 let time = prompt("Введите дату в формате YYYY-MM-DD");
 let month = 30;
 appData = {
@@ -58,3 +58,15 @@ for(let i = 0; i < 2;i++)
 // }while(i < 2);
 appData.budgetPerDay = appData.budget/month;
 alert("Ваш бюджет на 1 день будет :" + appData.budgetPerDay);
+if(appData.budgetPerDay < 100){
+    console.log("Нужно больше зарабатывать");
+}else if(appData.budgetPerDay > 100 && appData.budgetPerDay < 2000)
+{
+    console.log("Ну почти Абрамович");
+}else if(appData.budgetPerDay > 2000)
+{
+    console.log("Правая рука Абрамовича");
+}else
+{
+    console.log("Что-то пошло не так!");
+}
